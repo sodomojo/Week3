@@ -12,20 +12,49 @@ Print out the cumulative sum calculated above
  Upload your python file to Canvas.
 """
 
+range = []
 
-def user_numbers():
-    start_num = input("Enter a number to start with: ")
-    start_num = int(start_num)
+start_num = int(input("Enter a number to start with: "))
 
-    if start_num <= 1:
+while start_num  < 0:
+    print("The number must be more than 1.  Try again.")
+else:
+    start_num.append(range)
+
+'''
+end_num = int(input("Enter a number to end with: "))
+
+while end_num < (start_num * 5):
+    print("The ending number must be at least five times greater than the starting number.  Try again.")
+    break
+
+
+for i in full_list:
+    pass
+'''
+
+
+
+"""
+global start_num
+global end_num
+
+def range_start():
+    start_num = int(input("Enter a number to start with: "))
+    while start_num < 0:
         print("The number must be more than 1.  Try again.")
+    return start_num
 
-    end_num = input("Enter a number to end with: ")
-    end_num = int(end_num)
+range_start()
 
-    if end_num < start_num * 5:
+def range_end():
+    end_num = int(input("Enter a number to end with: "))
+    while end_num > (start_num * 5):
         print("The ending number must be at least five times greater than the starting number.  Try again.")
+        break
+    return end_num
 
 
-user_numbers()
-
+range_end()
+"""
+#full_range = list(range_start(), range_end())
