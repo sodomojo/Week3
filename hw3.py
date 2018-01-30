@@ -16,7 +16,7 @@ range = []
 
 start_num = int(input("Enter a number to start with: "))
 
-while start_num  < 0:
+while start_num < 0:
     print("The number must be more than 1.  Try again.")
 else:
     start_num.append(range)
