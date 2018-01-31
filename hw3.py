@@ -10,58 +10,30 @@ Print out the number and index of each item in the list that is even
 Sum all the odd numbers in the list using a for loop ( hint: append odd numbers to a list and then sum() that list )
 Print out the cumulative sum calculated above
  Upload your python file to Canvas.
+
 """
 
+start_num = 0
+end_num = 0
 
-'''
-start_num = int(input("Enter a number to start with: "))
-
-while int(input(start_num)) < 0:
+start_num = int(input("Please enter a starting number: "))
+while int(start_num) < 0:
     print("The number must be more than 1.  Try again.")
 
 
-end_num = int(input("Enter a number to end with: "))
-
-while int(input(end_num)) < (start_num * 5):
+end_num = int(input("Please enter an ending number: "))
+while int(end_num) < (start_num * 5):
     print("The ending number must be at least five times greater than the starting number.  Try again.")
 
-print("Okay moving on")
 
+full_range = list(range(start_num, end_num))
 
-full_list = [start_num, end_num, 2]
-
-for index, i in enumerate(full_list):
+print("Even numbers in your list:")
+for even_index, i in enumerate(full_range):
     if i % 2 == 0:
-        print("{}, {}".format(i, str(index)))
-'''
-
-
-
-
-
-global start_num
-global end_num
-
-def range_start():
-    start_num = int(input("Enter a number to start with: "))
-    while int(input(start_num)) < 0:
-        print("The number must be more than 1.  Try again.")
-    return start_num
-
-range_start()
-
-def range_end():
-    end_num = int(input("Enter a number to end with: "))
-    while int(input(end_num)) < (start_num * 5):
-        print("The ending number must be at least five times greater than the starting number.  Try again.")
+        print("{} is at the {} index".format(i, str(even_index)))
         break
-    return end_num
+for odd_index, i in enumerate(full_range):
+    if i % 2 == 1:
 
-range_end()
-
-full_range = list(start_num, end_num)
-
-for index, i in enumerate(full_range):
-    if i % 2 == 0:
-        print("{}, {}".format(i, str(index)))
 
