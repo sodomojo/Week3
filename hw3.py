@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-import math
-
 
 """
 Ask the user to enter a starting and ending number
